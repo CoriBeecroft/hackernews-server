@@ -56,4 +56,22 @@ public class HackerNewsItem {
     
     public Boolean getDead() { return dead; }
     public void setDead(Boolean dead) { this.dead = dead; }
+
+    @Override
+    public String toString() {
+        return "HackerNewsItem{\n" +
+                "  id=" + id + ",\n" +
+                "  type='" + type + "',\n" +
+                "  by='" + by + "',\n" +
+                "  time=" + time + ",\n" +
+                "  text='" + (text != null && text.length() > 50 ? text.substring(0, 50) + "..." : text) + "',\n" +
+                "  url='" + url + "',\n" +
+                "  title='" + title + "',\n" +
+                "  score=" + score + ",\n" +
+                "  descendants=" + descendants + ",\n" +
+                "  kids=" + (kids != null ? java.util.Arrays.toString(kids) : null) + ",\n" +
+                "  deleted=" + deleted + ",\n" +
+                "  dead=" + dead + "\n" +
+                '}';
+    }
 }
